@@ -2,6 +2,8 @@
 
 This repository contains the preprocessing, model selection, training, and evaluation code for LexiStack and DistilBERT in the five-candidate experiment. The task is to classify a predominantly English sports headline into one of eight sports.
 
+[Try both classifiers in your browser](https://huggingface.co/spaces/budijuarto/was1264-sports-headline-demo) or [download the refit checkpoints](https://huggingface.co/budijuarto/was1264-sports-headline-models).
+
 The archived experiment reported mean pooled out-of-fold weighted F1 of **96.14% for LexiStack** and **95.11% for DistilBERT**. Each model uses three seeds (42, 123, 2026) and five group-disjoint outer folds per seed. In each fold, it scores five candidates on the same inner validation split and refits the winner on the full outer training fold. Ties go to the first candidate in the published order.
 
 | Method | Candidate grid, in selection order |
